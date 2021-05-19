@@ -5,8 +5,8 @@ const Expenses = (props) => {
     return (
         <div className="expenses">
             {
-                items.map(item => (
-                    <ExpenseItem title={ item.title } amount={ item.amount } date={ item.date } />
+                items.map((item, i) => (
+                    <ExpenseItem key={ i } title={ item.title } amount={ item.amount } date={ item.date } />
                 ))
 
             }
